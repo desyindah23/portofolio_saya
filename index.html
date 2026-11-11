@@ -1,374 +1,57 @@
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Desy Indah Rizqiah</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #f4f8ff;
-    color: #172554;
-}
-
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 8%;
-    background: white;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 15px #00000010;
-}
-
-/* LOGO DESY */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-icon {
-    width: 43px;
-    height: 43px;
-    background: linear-gradient(135deg, #2563eb, #172554);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    font-size: 26px;
-    font-weight: bold;
-    box-shadow: 0 4px 12px #2563eb40;
-}
-
-.logo-text {
-    font-size: 27px;
-    font-weight: bold;
-    color: #172554;
-}
-
-.logo-text span {
-    color: #2563eb;
-}
-
-/* MENU */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #172554;
-    font-weight: 600;
-    transition: .3s;
-}
-
-nav ul li a:hover {
-    color: #2563eb;
-}
-
-/* BERANDA */
-#beranda {
-    min-height: 90vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px 10%;
-    gap: 40px;
-}
-
-.hero-text {
-    max-width: 550px;
-}
-
-.hero-text h4 {
-    color: #2563eb;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.hero-text h1 span {
-    color: #2563eb;
-}
-
-.hero-text h2 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-.hero-text p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #64748b;
-    margin-bottom: 25px;
-}
-
-.btn {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.btn:hover {
-    background: #1e40af;
-    transform: translateY(-3px);
-}
-
-/* FOTO PROFIL */
-.foto {
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 8px solid white;
-    box-shadow: 0 10px 35px #2563eb30;
-}
-
-/* TENTANG */
-#tentang {
-    padding: 90px 10%;
-    text-align: center;
-    background: white;
-}
-
-.judul {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-
-.judul span {
-    color: #2563eb;
-}
-
-.deskripsi {
-    max-width: 650px;
-    margin: auto;
-    color: #64748b;
-    line-height: 1.8;
-}
-
-.kartu {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #f4f8ff;
-    padding: 30px;
-    border-radius: 15px;
-    width: 220px;
-    transition: .3s;
-    box-shadow: 0 5px 15px #00000008;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px #2563eb20;
-}
-
-.card h3 {
-    color: #2563eb;
-    margin-bottom: 10px;
-}
-
-/* KONTAK */
-#kontak {
-    padding: 90px 10%;
-    text-align: center;
-}
-
-#kontak p {
-    color: #64748b;
-    margin: 15px 0 25px;
-    line-height: 1.8;
-}
-
-/* FOOTER */
-footer {
-    background: #172554;
-    color: white;
-    text-align: center;
-    padding: 22px;
-}
-
-/* RESPONSIVE HP */
-@media(max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    nav ul {
-        gap: 20px;
-    }
-
-    #beranda {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 60px 7%;
-    }
-
-    .hero-text h1 {
-        font-size: 35px;
-    }
-
-    .hero-text h2 {
-        font-size: 19px;
-    }
-
-    .foto {
-        width: 230px;
-        height: 230px;
-    }
-
-    .judul {
-        font-size: 29px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Portfolio Desy Indah Rizqiah</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-[#f4f8ff] text-[#172554] font-sans min-h-screen flex flex-col justify-between">
 
-<body>
-
-<!-- NAVBAR DAN LOGO -->
-<nav>
-
-    <div class="logo">
-        <div class="logo-icon">D</div>
-        <div class="logo-text">
-            Desy<span>.</span>
-        </div>
-    </div>
-
-    <ul>
-        <li><a href="#beranda">Beranda</a></li>
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-    </ul>
-
-</nav>
-
-<!-- BERANDA -->
-<section id="beranda">
-
-    <div class="hero-text">
-
-        <h4>SELAMAT DATANG DI WEBSITE SAYA</h4>
-
-        <h1>
-            Halo, Saya <span>Desy Indah Rizqiah</span>
-        </h1>
-
-        <h2>Pelajar SMK Negeri 1 Probolinggo</h2>
-
-        <p>
-            Saya adalah seorang pelajar di SMK Negeri 1
-            Probolinggo. Saat ini saya duduk di bangku kelas 12
-            dan sedang melaksanakan PKL di Onlenkan Probolinggo.
-        </p>
-
-        <a href="#tentang" class="btn">
-            Kenali Saya
-        </a>
-
-    </div>
-
-    <img
-        class="foto"
-        src="fotosaya.jpeg"
-        alt="Foto Desy Indah Rizqiah"
-    >
-
-</section>
-
-<!-- TENTANG -->
-<section id="tentang">
-
-    <h2 class="judul">
-        Tentang <span>Saya</span>
-    </h2>
-
-    <p class="deskripsi">
-        Perkenalkan, nama saya Desy Indah Rizqiah,
-        biasa dipanggil Desy. Saya merupakan pelajar
-        SMK Negeri 1 Probolinggo yang sedang belajar
-        membuat website menggunakan HTML dan CSS.
-        Saya ingin terus mengembangkan kemampuan,
-        pengalaman, dan kreativitas saya di bidang teknologi.
-    </p>
-
-    <div class="kartu">
-
-        <div class="card">
-            <h3>🎓 Pendidikan</h3>
-            <p>SMK Negeri 1 Probolinggo</p>
-            <p>Kelas 12</p>
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white px-[8%] py-4 flex flex-col md:flex-row justify-between items-center shadow-sm gap-4 md:gap-0">
+        <div class="flex items-center gap-2.5">
+            <div class="w-[43px] h-[43px] bg-gradient-to-br from-blue-600 to-[#172554] text-white flex justify-center items-center rounded-xl text-2xl font-bold shadow-md shadow-blue-500/30">
+                D
+            </div>
+            <div class="text-2xl font-bold text-[#172554]">
+                Desy<span class="text-blue-600">.</span>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>💻 Keahlian</h3>
-            <p>HTML dan CSS</p>
+        <ul class="flex list-none gap-6 md:gap-8 font-semibold">
+            <li><a href="index.html" class="text-blue-600">Beranda</a></li>
+            <li><a href="tentang.html" class="hover:text-blue-600 transition">Tentang</a></li>
+            <li><a href="kontak.html" class="hover:text-blue-600 transition">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-[80vh] flex flex-col-reverse md:flex-row justify-between items-center px-[7%] md:px-[10%] py-12 md:py-16 gap-10 my-auto">
+        <div class="max-w-xl text-center md:text-left">
+            <h4 class="text-blue-600 font-bold text-sm md:text-base tracking-wider mb-3">SELAMAT DATANG DI WEBSITE SAYA</h4>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                Halo, Saya <span class="text-blue-600">Desy Indah Rizqiah</span>
+            </h1>
+            <h2 class="text-lg md:text-2xl font-medium mb-4 text-slate-700">Pelajar SMK Negeri 1 Probolinggo</h2>
+            <p class="text-slate-500 leading-relaxed mb-6 text-base md:text-lg">
+                Saya adalah seorang pelajar di SMK Negeri 1 Probolinggo. Saat ini saya duduk di bangku kelas 12 dan sedang melaksanakan PKL di Onlenkan Probolinggo.
+            </p>
+            <a href="tentang.html" class="inline-block bg-blue-600 hover:bg-blue-800 text-white font-medium px-6 py-3 rounded-xl transition transform hover:-translate-y-1 shadow-md shadow-blue-500/20">
+                Kenali Saya
+            </a>
         </div>
 
-        <div class="card">
-            <h3>⭐ Hobi</h3>
-            <p>Memasak</p>
-            <p>Mempelajari Hal Baru</p>
+        <div>
+            <img class="w-[230px] h-[230px] md:w-[320px] md:h-[320px] rounded-full object-cover border-8 border-white shadow-xl shadow-blue-500/20" src="fotosaya.jpeg" alt="Foto Desy Indah Rizqiah">
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- KONTAK -->
-<section id="kontak">
-
-    <h2 class="judul">
-        Hubungi <span>Saya</span>
-    </h2>
-
-    <p>
-        Terima kasih sudah mengunjungi website portfolio saya.
-        Senang bisa berkenalan dengan kalian!
-    </p>
-
-    <a href="desyindahrizqiah@email.com" class="btn">
-        ✉ Kirim Email
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Desy Indah Rizqiah | My Personal Portfolio</p>
-</footer>
+    <!-- FOOTER -->
+    <footer class="bg-[#172554] text-white text-center py-6 text-sm">
+        <p>© 2026 Desy Indah Rizqiah | My Personal Portfolio</p>
+    </footer>
 
 </body>
 </html>
